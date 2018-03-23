@@ -27,7 +27,7 @@ export class MoviesListPage {
     this.loading.present().then(()=>{
 
       this.localStorageProvider.getMovies().then((movies)=>{
-        if(movies) {
+        if(movies.length!=0) {
           this.store.dispatchLoadStorageAction(movies);         
         }
         else{
@@ -36,10 +36,10 @@ export class MoviesListPage {
       })
     })
 
-    this.moviesProvider.getMovies().subscribe((movies)=>{
+    this.store.getMovies().subscribe((movies)=>{
       this.movies = movies;
       this.localStorageProvider.setMovies(movies);
-      if(this.loading) this.loading.dismiss();
+      if(this.loading) this.loading.dismissAll();
     })
     
   }
