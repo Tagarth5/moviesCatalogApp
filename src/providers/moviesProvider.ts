@@ -18,7 +18,7 @@ export class MoviesProvider {
   movies: any;
 
   constructor(public http: Http) {
-    console.log('Hello MoviesServiceProvider Provider');
+    
   }
 
   getMovies():any{

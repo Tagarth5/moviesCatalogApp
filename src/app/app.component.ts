@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MoviesListPage } from '../pages/moviesList/moviesList';
-import { ListPage } from '../pages/list/list';
 import { LocalStorageProvider } from '../providers/localStorageProvider';
 import { Store } from "@ngrx/store";
 import { MoviesStoreService } from '../store/services/movies.store';
@@ -26,18 +25,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'MoviesList', component: MoviesListPage },
-      { title: 'List', component: ListPage }
+      { title: 'MoviesList', component: MoviesListPage }
     ];
 
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      
-      this.localStorageProvider.getMovies().then({
-        
-      });
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();

@@ -24,16 +24,11 @@ export class MovieDetailPage {
 
   }
 
-  ionViewDidEnter(){
-    console.log(this.details);
-  }
-
   deleteButtonClicked(){
     this.deleteClicked.emit(this.details.id);
   }
 
   updateButtonClicked(){
     this.updateClicked.emit(this.details);
-    console.log(this.details);
   }
 }

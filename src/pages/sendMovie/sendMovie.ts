@@ -28,18 +28,14 @@ export class SendMoviePage {
       })
     }  
 
-    console.log(this.movie);
   }
 
   sendMovie(){
     if(this.movie.id==-1){
-      console.log(this.movie);
-      console.log(this.moviesLength);
       this.movie.id = this.moviesLength+1; 
       this.store.dispatchCreateAction(this.movie);
     }
     else{
-      console.log(this.movie);
       this.store.dispatchUpdateAction(this.movie);
     }
     
@@ -60,7 +56,7 @@ export class SendMoviePage {
           text: 'Cancel',
           role: 'cancel',
           handler: data => {
-            console.log('Cancel clicked');
+           
           }
         },
         {
@@ -74,7 +70,7 @@ export class SendMoviePage {
     alert.present();
 
     alert.onDidDismiss((data) => {
-      console.log(data);
+      
       if(data.URL!=""){
         this.movie.image = data.URL;  
       }
