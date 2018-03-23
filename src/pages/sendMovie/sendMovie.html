@@ -1,0 +1,45 @@
+
+<ion-content center>
+    <ion-card style="height:37%">
+        <ion-row>
+          <ion-col col-4>
+              <ion-row class="img-row" (click)="changeImage()">
+                  <img *ngIf="movie" width="100%" height="100%" alt="No image available" src="{{movie.image}}">
+              </ion-row>
+              <ion-row class="duration-row text-row">
+                  <ion-icon name="clock"></ion-icon><input style="width:70%" placeholder="Duration" [(ngModel)]="movie.duration">
+              </ion-row>    
+          </ion-col>
+          <ion-col col-8>
+              <ion-row class="text-row" style="height:100%">
+                <ion-col style="height:100%">
+                        <div>
+                            <input style="width:100%" placeholder="Title" [(ngModel)]="movie.title">
+                        </div>        
+                    
+                        <div col-4 style="padding:0; display:inline-block">
+                            <input style="width:100%" placeholder="Year"  [(ngModel)]="movie.year">
+                        </div> 
+                        <div col-2 style="padding:0; display:inline-block">
+                            <img class="flag-img" src="https://i.imgur.com/VXrPsG4.png">
+                        </div>
+                        <div col-4 style="padding:0; display:inline-block">
+                            <input style="width:100%" placeholder="Type"  [(ngModel)]="movie.type">
+                        </div>  
+                        <div>                                                              
+                         Sinopsis:<textarea rows="3" align="left" style="text-overflow:ellipsis; overflow:hidden"  [(ngModel)]="movie.sinopsis"></textarea>
+                        </div>   
+                        <div style="position:absolute; bottom:5%">
+                            Director: <input style="width:70%" placeholder="Director"  [(ngModel)]="movie.director">
+                        </div>
+                      
+                </ion-col>
+                
+              </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-top:1px solid black" >
+            <button ion-button icon-only round outline style="margin:auto" (click)="sendMovie()"><ion-icon name="ios-share-outline" ></ion-icon></button>
+        </ion-row>
+      </ion-card>
+</ion-content>

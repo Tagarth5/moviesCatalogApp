@@ -1,0 +1,52 @@
+<ion-card>
+    <ion-row style="height:85%">
+      <ion-col col-4>
+          <ion-row class="img-row">
+              <img *ngIf="details" width="100%" height="100%" src="{{details.image}}">
+          </ion-row>
+          <ion-row class="duration-row text-row">
+              <ion-icon name="clock"></ion-icon>{{details.duration}}
+          </ion-row>    
+      </ion-col>
+      <ion-col class="texts-col" col-8>
+          <ion-row class="text-row" style="height:100%">
+            <ion-col style="height:100%">
+                <ion-row style="height:15%">
+                    <p style="font-weight:bold">{{details.title}}</p>
+                  </ion-row>
+                 
+                  <ion-row class="year-row">
+                      <ion-col col-3>
+                            {{details.year}}
+                      </ion-col >
+                      <ion-col col-3>
+                            <img width="10%" class="flag-img" height="10%" src="https://i.imgur.com/VXrPsG4.png">
+                      </ion-col >
+                      <ion-col col-4>
+                            <div>{{details.type}}</div>
+                      </ion-col>
+                     
+                  </ion-row>           
+
+                  <ion-row style="height:55%">
+                    <div align="left" style="text-overflow:ellipsis; overflow:hidden">Sinopsis: {{details.sinopsis}}</div>
+                 </ion-row>
+                  <ion-row style="height:15%">
+                    <ion-col style="text-align:left" col-6>Director: {{details.director}}</ion-col >
+                   
+                  </ion-row>
+            </ion-col>
+            
+          </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row text-center style="border-top:1px solid black; height:15%">
+        <ion-col col-6 text-center>
+            <button ion-button float-right [color]="myColor2"(click)="updateButtonClicked()"><ion-icon name="md-clipboard"> </ion-icon></button>
+        </ion-col>
+        <ion-col col-6 text-center>
+            <button ion-button float-left [color]="myColor"(click)="deleteButtonClicked()"><ion-icon name="trash"> </ion-icon></button>
+        </ion-col>
+    </ion-row>
+    
+  </ion-card>

@@ -1,0 +1,25 @@
+<ion-header >
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Movies List</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  class="has-header">
+  <ion-list [virtualScroll]="movies">
+      <ion-item *virtualItem="let movie">
+          <movieDetail  [details]="movie" (deleteClicked)="deleteMovie($event)" (updateClicked)="updateMovie($event)" >    
+            </movieDetail>
+      </ion-item>
+             
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <button ion-button icon-only (click)="createMovie()">
+      <ion-icon name="md-add-circle"></ion-icon>
+    </button>
+
+  </ion-toolbar>
+</ion-footer>
