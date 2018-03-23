@@ -38,36 +38,6 @@
       "sinopsis": "Test",
       "director": "Test",
       "duration": "Test"
-    },
-    {
-      "id": 5,
-      "image": "https://i.imgur.com/4115Lqa.jpg",
-      "title": "Test 3",
-      "year": "Test",
-      "type": "Test",
-      "sinopsis": "Test",
-      "director": "Test",
-      "duration": "Test"
-    },
-    {
-      "id": 6,
-      "image": "https://i.imgur.com/4115Lqa.jpg",
-      "title": "test 5",
-      "year": "test",
-      "type": "test",
-      "sinopsis": "Test",
-      "director": "test",
-      "duration": "test"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
